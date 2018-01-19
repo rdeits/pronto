@@ -28,13 +28,6 @@ public:
   }
 };
 
-template<class LikelihoodInterface>
-void gpfMeasurement(GPFLikelihoodInterface<LikelihoodInterface> * likelihood_interface, const RBIS & state,
-    const RBIM & cov,
-    const Eigen::VectorXi & z_indices, Eigen::VectorXd & z_effective, Eigen::MatrixXd & R_effective, int num_samples,
-    double max_weight_proportion,
-    bot_lcmgl_t * lcmgl = NULL);
-
 pronto_indexed_measurement_t * gpfCreateLCMmsg(const Eigen::VectorXi & z_indices, const Eigen::VectorXd & z_effective,
     const Eigen::MatrixXd & R_effective);
 
